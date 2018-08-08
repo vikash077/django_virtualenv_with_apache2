@@ -50,7 +50,7 @@ add below settings in "/etc/apache2/sites-enabled/000-default.conf"<br/>
 <pre>
 WSGIDaemonProcess python_app python-path=/var/www/python_app:/var/www/python_app/env/lib/python3.6/site-packages
 WSGIProcessGroup python_app
-WSGIScriptAlias /var/www/python_app/myapp/wsgi.py
+WSGIScriptAlias / /var/www/python_app/myapp/wsgi.py
 </pre>
 
 <b>NOW Restart your server:</b><br/>
