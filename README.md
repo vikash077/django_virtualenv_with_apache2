@@ -10,4 +10,12 @@ source env/bin/activate<br/>
 env/bin/python3.6 -m pip install django<br/>
 
 env/bin/django-admin.py startproject myapp .<br/>
-## sudo apt-get install libapache2-mod-wsgi-py3
+
+env/bin/python manage.py runserver 0.0.0.0:8080<br/>
+
+Check it http://localhost:8080/ <br/>
+
+
+## NOW SET UP IT WITH APACHE2  mod-wsgi
+
+sudo apt-get install libapache2-mod-wsgi-py3
