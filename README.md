@@ -25,9 +25,12 @@ sudo vim /etc/apache2/sites-enabled/000-default.conf<br/>
 <pre>
 WSGIDaemonProcess python_app python-path=/var/www/python_app:/var/www/python_app/env/lib/python3.6/site-packages
 WSGIProcessGroup python_app
-WSGIScriptAlias /myapp /var/www/python_app/myapp/wsgi.py
+WSGIScriptAlias /var/www/python_app/myapp/wsgi.py
 </pre>
 
 NOW Restart your server:<br/>
 service apache2 restart<br/>
+
+Check it now:<br/>
+http://localhost/<br/>
 
