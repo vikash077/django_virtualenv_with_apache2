@@ -39,13 +39,14 @@ Check it http://localhost:8080/ <br/>
 if apache not installed : <b>apt-get install apache2</b><br/>
 
 <b>Install mod_wsgi for apache2 :</b><br/>
-sudo apt-get install libapache2-mod-wsgi-py3<br/>
+<pre>sudo apt-get install libapache2-mod-wsgi-py3</pre>
 
 
 <b>Change apache configurations :</b><br/>
-sudo vim /etc/apache2/sites-enabled/000-default.conf<br/>
-add below settings in "/etc/apache2/sites-enabled/000-default.conf" <br/>
-
+<pre>
+sudo vim /etc/apache2/sites-enabled/000-default.conf
+</pre>
+add below settings in "/etc/apache2/sites-enabled/000-default.conf"<br/>
 <pre>
 WSGIDaemonProcess python_app python-path=/var/www/python_app:/var/www/python_app/env/lib/python3.6/site-packages
 WSGIProcessGroup python_app
@@ -53,7 +54,7 @@ WSGIScriptAlias /var/www/python_app/myapp/wsgi.py
 </pre>
 
 <b>NOW Restart your server:</b><br/>
-service apache2 restart<br/>
+<pre>service apache2 restart</pre>
 
 <b>Check it now:</b><br/>
 http://localhost/<br/>
