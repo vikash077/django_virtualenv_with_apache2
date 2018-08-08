@@ -28,6 +28,6 @@ WSGIProcessGroup python_app
 WSGIScriptAlias /myapp /var/www/python_app/myapp/wsgi.py
 </pre>
 
-NOW Restart your server:
+NOW Restart your server:<br/>
 service apache2 restart<br/>
 
