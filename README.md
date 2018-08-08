@@ -16,6 +16,18 @@ env/bin/python manage.py runserver 0.0.0.0:8080<br/>
 Check it http://localhost:8080/ <br/>
 
 
-## NOW SET UP IT WITH APACHE2  mod-wsgi
+### NOW SET UP IT WITH APACHE2  mod-wsgi
+if apache not installed : apt-get install apache2<br/>
 
-sudo apt-get install libapache2-mod-wsgi-py3
+sudo apt-get install libapache2-mod-wsgi-py3<br/>
+sudo vim /etc/apache2/sites-enabled/000-default.conf<br/>
+
+<pre>
+WSGIDaemonProcess python_app python-path=/var/www/python_app:/var/www/python_app/env/lib/python3.6/site-packages
+WSGIProcessGroup python_app
+WSGIScriptAlias /myapp /var/www/python_app/myapp/wsgi.py
+</pre>
+
+NOW Restart your server:
+service apache2 restart<br/>
+
