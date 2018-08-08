@@ -1,29 +1,36 @@
 # STEPS OF SETUP Django in virtual ENV With apache2
 
-<b>create a directory :</b><br/>
+<b>Create a directory :</b><br/>
+<pre>
+cd /var/www
+mkdir python_app
+sudo chown &lt;user&gt;:&lt;userGroup&gt; python_app -R
+</pre>
 
-cd /var/www <br/>
-mkdir python_app<br/>
-sudo chown &lt;user&gt;:&lt;userGroup&gt; python_app -R <br/>
+<b>Create virtual environment for python3:</b><br/>
+<pre>
+cd python_app
+virtualenv -p python3 env
+</pre>
 
-<b>Create virtual Environment with python3:</b><br/>
-cd python_app <br/>
-virtualenv -p python3 env <br/>
+<b>Activate your virtual environment:</b><br/>
+<pre>
+source env/bin/activate
+</pre>
 
-<b>Activate Your Virtual Environment:</b><br/>
-source env/bin/activate<br/>
-
-<b>And You want to deactivate virtual environment:</b><br/>
-deactivate<br/>
+<b>And if you want to deactivate virtual environment:</b><br/>
+<pre>
+deactivate
+</pre>
 
 <b>Install Django:</b><br/>
-env/bin/python3.6 -m pip install django<br/>
+<pre>env/bin/python3.6 -m pip install django</pre>
 
 <b>Start new project in Django:</b><br/>
-env/bin/django-admin.py startproject myapp .<br/>
+<pre>env/bin/django-admin.py startproject myapp .</pre>
 
 <b>Test And Try Django:</b><br/>
-env/bin/python manage.py runserver 0.0.0.0:8080<br/>
+<pre>env/bin/python manage.py runserver 0.0.0.0:8080</pre>
 
 Check it http://localhost:8080/ <br/>
 
