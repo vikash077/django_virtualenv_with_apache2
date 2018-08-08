@@ -2,7 +2,7 @@
 
 cd /var/www <br/>
 mkdir python_app<br/>
-sudo chown <user>:<userGroup> python_app -R
+sudo chown &lt;user&gt;:&lt;userGroup&gt; python_app -R <br/>
 cd python_app <br/>
 virtualenv -p python3 env <br/>
 source env/bin/activate<br/>
